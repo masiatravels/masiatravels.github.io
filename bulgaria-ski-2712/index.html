@@ -271,7 +271,7 @@ const Q = {
   ],
   bag: "🧳 כבודה: טרולי לכל נוסעת, הלוך וחזור · מזוודה בתוספת ₪250 לנוסעת",
   hotels: [
-    { place: "סופיה · מלון יוקרה על שדרות ויטושה", stars: 0, where: "מרכז סופיה", nights: 1, dates: "27–28.12.2026",
+    { map: "Vitosha Blvd 89B, Sofia, Bulgaria", place: "סופיה · מלון יוקרה על שדרות ויטושה", stars: 0, where: "מרכז סופיה", nights: 1, dates: "27–28.12.2026",
       score: "9.2", scoreWord: "מצוין", reviews: "5,102",
       room: "🛏️ <b>2 חדרים</b><br>חדר זוגי + חדר לשלוש.",
       about: "🏙️ <b>מגדל יוקרה במרכז העיר</b><br>מלון גדול ומודרני על שדרות ויטושה, 5 דקות הליכה מהמטרו. חדרים גדולים במיוחד, בריכה מקורה, ספא וסאונה, כמה מסעדות ובר בקומה ה־29 עם נוף לעיר.",
@@ -279,7 +279,7 @@ const Q = {
       photos: [["m1.jpg","חדר מרווח"],["m2.jpg","חדר זוגי"],["m3.jpg","פינת ישיבה בחדר עם נוף"],["m4.jpg","חדר הרחצה"],["m5.jpg","מגדל המלון בשקיעה"],["m6.jpg","המלון ומרכז סופיה בלילה"]],
       bullets: ["ארוחת בוקר בופה","בריכה מקורה, ספא וסאונה","חדרים גדולים ומודרניים"],
       policy: "ביטול חינם עד 23.12.2026" },
-    { place: "בנסקו · מלון באתר הסקי", stars: 3, where: "ליד הגונדולה", nights: 2, dates: "28–30.12.2026",
+    { map: "2 Hristo Matov Street, Bansko 2770, Bulgaria", place: "בנסקו · מלון באתר הסקי", stars: 3, where: "ליד הגונדולה", nights: 2, dates: "28–30.12.2026",
       score: "9.3", scoreWord: "מצוין", reviews: "178",
       room: "🛏️ <b>2 חדרים</b><br>חדר זוגי + חדר לשלוש.",
       about: "⛷️ <b>קרוב לגונדולה</b><br>מלון 3 כוכבים בבנסקו, 8 דקות הליכה מהגונדולה ו־5 דקות מאתר הסקי. במלון בריכה מקורה, חדר אדים ועיסויים, ולכל חדר מרפסת.",
@@ -287,7 +287,7 @@ const Q = {
       photos: [["b2.jpg","חדר במלון"],["b6.jpg","הבריכה המקורה"],["b8.jpg","נוף להרים מהמרפסת"],["b1.jpg","פינת ישיבה בחדר"],["b3.jpg","חדר במלון"],["b9.jpg","הלובי עם האח"],["b10.jpg","המסעדה"],["b4.jpg","הלאונג׳ והבר"],["b5.jpg","הסאונה"],["b7.jpg","אזור הספא"]],
       bullets: ["ארוחת בוקר בופה בכל בוקר","8 דקות הליכה מהגונדולה","בריכה מקורה וחדר אדים"],
       policy: "ביטול חינם עד 22.12.2026" },
-    { place: "סופיה · מלון בוטיק 4 כוכבים", stars: 4, where: "על שדרות ויטושה, רחוב הקניות המרכזי", nights: 2, dates: "30.12.2026–1.1.2027",
+    { map: "Vitosha Blvd 21, Sofia 1000, Bulgaria", place: "סופיה · מלון בוטיק 4 כוכבים", stars: 4, where: "על שדרות ויטושה, רחוב הקניות המרכזי", nights: 2, dates: "30.12.2026–1.1.2027",
       score: "9.0", scoreWord: "מצוין", reviews: "571",
       room: "🛏️ <b>2 חדרים</b><br>חדר זוגי + חדר לשלוש.",
       about: "🎆 <b>ערב השנה החדשה בלב סופיה</b><br>מלון בוטיק מעוצב של 31 חדרים בלבד, כל חדר בעיצוב אחר, ישר על מדרחוב ויטושה — בין המסעדות, הברים והחנויות. 6 דקות הליכה מתחנת המטרו סרדיקה ו־13 דקות מקתדרלת אלכסנדר נבסקי.",
@@ -358,6 +358,7 @@ $("hotels").innerHTML = Q.hotels.map(h => `
     <div class="near">${h.near.map(n => `<div><b>${esc(n[0])}</b>${esc(n[1])}</div>`).join("")}</div>
     <ul class="dots-list">${h.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>
     ${(h.policy||Q.policy)?`<span class="policy">ℹ️ ${esc(h.policy||Q.policy)}</span>`:""}
+    ${h.map?`<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.map)}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;padding:13px 16px;border-radius:12px;background:#16213e;color:#f6f1e9;font-weight:700;text-decoration:none;border:1.5px solid #b8975f">📍 ${document.documentElement.lang==="ar"?"افتح موقع الفندق على الخريطة":"לפתוח את מיקום המלון במפה"}</a>`:""}
   </section>`).join("");
 
 $("tl").innerHTML = Q.itinerary.map(r => `<div class="tl-row"><div class="tl-d">${esc(r[0])}</div><div class="tl-t">${esc(r[1])}</div></div>`).join("");

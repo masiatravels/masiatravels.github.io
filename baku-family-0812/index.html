@@ -271,7 +271,7 @@ const Q = {
   ],
   bag: "🧳 כבודה: טרולי לכל נוסע, הלוך וחזור · מזוודה בתוספת ₪200 לנוסע · שימו לב: שעון באקו מקדים בשעתיים את שעון ישראל",
   hotels: [
-    { place: "באקו · מלון 4 כוכבים עם נוף לעיר", stars: 4, where: "ליד רחוב ניזאמי וקניון 28 Mall", nights: 6, dates: "8–14.12.2026",
+    { map: "Salatin Asgarova 176, Baku 1010, Azerbaijan", place: "באקו · מלון 4 כוכבים עם נוף לעיר", stars: 4, where: "ליד רחוב ניזאמי וקניון 28 Mall", nights: 6, dates: "8–14.12.2026",
       score: "", scoreWord: "", reviews: "",
       room: "🛏️ <b>סוויטה עם 2 חדרי שינה נפרדים וסלון</b><br>מרווחת ונוחה למשפחה — שני חדרי שינה לפרטיות מלאה, וסלון משותף לבילוי יחד.",
       about: "📍 <b>מיקום נוח</b><br>500 מטר בלבד מקניון 28 Mall, כ־15 דקות הליכה לרחוב ניזאמי — רחוב הקניות והמסעדות המפורסם של באקו — ובתי קפה ומסעדות במרחק הליכה קצר. המסעדה והמרפסת של המלון בקומות העליונות, עם נוף לעיר ולים הכספי.",
@@ -343,6 +343,7 @@ $("hotels").innerHTML = Q.hotels.map(h => `
     <div class="near">${h.near.map(n => `<div><b>${esc(n[0])}</b>${esc(n[1])}</div>`).join("")}</div>
     <ul class="dots-list">${h.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>
     ${(h.policy||Q.policy)?`<span class="policy">ℹ️ ${esc(h.policy||Q.policy)}</span>`:""}
+    ${h.map?`<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.map)}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;padding:13px 16px;border-radius:12px;background:#16213e;color:#f6f1e9;font-weight:700;text-decoration:none;border:1.5px solid #b8975f">📍 ${document.documentElement.lang==="ar"?"افتح موقع الفندق على الخريطة":"לפתוח את מיקום המלון במפה"}</a>`:""}
   </section>`).join("");
 
 $("tl").innerHTML = Q.itinerary.map(r => `<div class="tl-row"><div class="tl-d">${esc(r[0])}</div><div class="tl-t">${esc(r[1])}</div></div>`).join("");

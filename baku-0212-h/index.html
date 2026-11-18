@@ -271,7 +271,7 @@ const Q = {
   ],
   bag: "🧳 כבודה: מזוודה + טרולי לכל נוסע, הלוך וחזור · שימו לב: שעון באקו מקדים בשעתיים את שעון ישראל",
   hotels: [
-    { place: "באקו · מלון 5 כוכבים של רשת בינלאומית", stars: 5, where: "במרכז באקו, מול הטיילת והים הכספי", nights: 5, dates: "2–7.12.2026",
+    { map: "1B Azadlig Avenue, Baku AZ1000, Azerbaijan", place: "באקו · מלון 5 כוכבים של רשת בינלאומית", stars: 5, where: "במרכז באקו, מול הטיילת והים הכספי", nights: 5, dates: "2–7.12.2026",
       score: "9.0", scoreWord: "מצוין", reviews: "469",
       room: "🛏️ <b>חדר קינג</b><br>חדר של 31 מ״ר עם מיטת קינג, אמבטיה ומקלחת נפרדת, חלוקי רחצה, מיני־בר ו־Wi-Fi חינם.",
       about: "📍 <b>מרכז העיר, על הים</b><br>מלון יוקרה 5 כוכבים של רשת בינלאומית מוכרת, צמוד לטיילת. במלון בריכה מקורה, ספא מלא, סאונה, חדר כושר, 3 מסעדות ומרפסת גג עם נוף פנורמי. האורחים נותנים למיקום ציון 9.4.",
@@ -342,6 +342,7 @@ $("hotels").innerHTML = Q.hotels.map(h => `
     <div class="near">${h.near.map(n => `<div><b>${esc(n[0])}</b>${esc(n[1])}</div>`).join("")}</div>
     <ul class="dots-list">${h.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>
     ${(h.policy||Q.policy)?`<span class="policy">ℹ️ ${esc(h.policy||Q.policy)}</span>`:""}
+    ${h.map?`<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.map)}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;padding:13px 16px;border-radius:12px;background:#16213e;color:#f6f1e9;font-weight:700;text-decoration:none;border:1.5px solid #b8975f">📍 ${document.documentElement.lang==="ar"?"افتح موقع الفندق على الخريطة":"לפתוח את מיקום המלון במפה"}</a>`:""}
   </section>`).join("");
 
 $("tl").innerHTML = Q.itinerary.map(r => `<div class="tl-row"><div class="tl-d">${esc(r[0])}</div><div class="tl-t">${esc(r[1])}</div></div>`).join("");
