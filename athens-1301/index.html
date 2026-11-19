@@ -385,5 +385,22 @@ document.addEventListener("click", e => {
 });
 
 </script>
+
+<script>
+(function(){
+  var ar=document.documentElement.lang==="ar";
+  var t=(Q.title||"");
+  var cities={"באקו":"باكو","אתונה":"أثينا","טביליסי":"تبليسي","גאורגיה":"جورجيا","לימסול":"ليماسول","סופיה":"صوفيا","בולגריה":"بلغاريا","קפריסין":"قبرص"};
+  var dest=Q.dest; if(!dest){for(var k in cities){if(t.indexOf(k)>-1||t.indexOf(cities[k])>-1){dest=ar?cities[k]:k;break;}}}
+  var last=dest?(ar?"يلا، "+dest+" بتستناكم ✈️😄":"יאללה, "+dest+" מחכה לכם ✈️😄"):(ar?"يلا، الإجازة بتستناكم ✈️😄":"יאללה, החופשה מחכה לכם ✈️😄");
+  var html=ar
+   ?'<p style="margin:0 0 8px;font-weight:700">وبالمناسبة، نصيحة صغيرة منّا 😉</p><p style="margin:0 0 8px">الأسعار بتتغير كل شوي، واللي متوفر اليوم مش أكيد يضل لبكرا.</p><p style="margin:0 0 8px">ابعتولنا صورة الجوازات ومنحجزلكم الغرفة من هلأ، وهيك بيضل هالسعر إلكم 🙌</p><p style="margin:0;font-weight:700">'+last+'</p>'
+   :'<p style="margin:0 0 8px;font-weight:700">ובינתיים, טיפ קטן מאיתנו 😉</p><p style="margin:0 0 8px">המחירים משתנים כל הזמן, ומה שיש היום לא תמיד יהיה מחר.</p><p style="margin:0 0 8px">שלחו לנו צילום דרכונים ונשריין לכם את החדר כבר עכשיו, ככה המחיר הזה נשאר שלכם 🙌</p><p style="margin:0;font-weight:700">'+last+'</p>';
+  var box=document.createElement("div"); box.id="closer";
+  box.style.cssText="margin:18px 0;padding:18px 18px;border-radius:14px;background:#fff;border:1.5px solid #b8975f;color:#16213e;line-height:1.6;font-size:16px";
+  box.innerHTML=html;
+  var cta=document.getElementById("cta"); if(cta&&cta.parentNode) cta.parentNode.insertBefore(box,cta);
+})();
+</script>
 </body>
 </html>
