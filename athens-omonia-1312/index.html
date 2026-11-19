@@ -243,7 +243,7 @@ footer p{max-width:560px;margin:4px auto;opacity:.85}
 <footer>
   <div class="brand">Masia Global Journeys · סוכנות נסיעות</div>
   <div id="terms"></div>
-</footer>
+<p style="margin-top:18px"><a href="https://www.instagram.com/masia_officials/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:#b8975f;text-decoration:none"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16213e" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.6" fill="#16213e"/></svg></a></p></footer>
 
 <div class="sticky" id="sticky"><a class="cta" id="cta2" target="_blank" rel="noopener"></a></div>
 <div class="lb" id="lb"><button aria-label="סגור">✕</button><img alt=""></div>
@@ -257,12 +257,12 @@ const Q = {
   title: "יוון · אתונה — 3 לילות בלב העיר",
   chips: ["👫 זוג · 2 נוסעים", "🌙 3 לילות", "📅 13–16.12.2026"],
   whatsapp: "972552991289",
-  validUntil: "היום בלבד — המחיר שמור לחצי שעה",
+  validUntil: "בכפוף לזמינות",
   optionsTitle: "המחיר",
   options: [
     { tag: "חבילה עם טרולי", meta: "3 לילות · 13.12.2026–16.12.2026", pp: 1570 }
   ],
-  optionsNote: "המחיר כולל טיסות הלוך וחזור, טרולי לכל נוסע ו־3 לילות במלון 4 כוכבים על כיכר אומוניה עם ארוחת בוקר. ⏰ המחיר שמור לחצי שעה בלבד — אחר כך מחירי הטיסות משתנים.",
+  optionsNote: "המחיר כולל טיסות הלוך וחזור, טרולי לכל נוסע ו־3 לילות במלון 4 כוכבים על כיכר אומוניה עם ארוחת בוקר. 🛡️ ביטול כרטיסי הטיסה ללא עלות במקרה של מלחמה.",
   flightsIntro: "יוצאים בבוקר ונוחתים באתונה בצהריים — כך שמנצלים כבר את היום הראשון.",
   legs: [
     { badge: "הלוך", date: "יום א׳ 13.12.2026", time: "09:20", from: "תל אביב", to: "אתונה", airline: "טיסת בוקר", info: "כשעתיים טיסה" },
@@ -270,12 +270,13 @@ const Q = {
   ],
   bag: "🧳 כבודה: טרולי לכל נוסע, הלוך וחזור",
   hotels: [
-    { place: "אתונה · כיכר אומוניה", stars: 4, where: "בלב העיר, ממש על כיכר אומוניה", nights: 3, dates: "13–16.12.2026",
+    { map: "Panagi Tsaldari (Pireos) 1, Athens 105 52, Greece", place: "אתונה · כיכר אומוניה", stars: 4, where: "בלב העיר, ממש על כיכר אומוניה", nights: 3, dates: "13–16.12.2026",
       score: "8.1", scoreWord: "טוב מאוד", reviews: "2,200+",
       about: "📍 <b>כיכר אומוניה</b> — הכיכר העגולה המפורסמת בלב אתונה, מהעתיקות בעיר (נוסדה ב־1846). במרכזה מזרקה עגולה ענקית ברוחב 30 מטר שמזנקת לגובה 20 מטר ומוארת בכל ערב. מתחת לכיכר נמצאת תחנת המטרו המרכזית של העיר, וממנה הולכים ברגל לשוק המרכזי, לרחוב הקניות ארמו ולמונסטירקי.",
       near: [["0 דק׳","על כיכר אומוניה והמזרקה"],["2 דק׳","הליכה למטרו"],["3 תחנות","מטרו לאקרופוליס"],["10 דק׳","הליכה לרחוב הקניות ארמו"]],
       photos: [["rooftop_bar.jpg","מסעדת ובר הגג"],["jacuzzi_top.jpg","הג׳קוזי על הגג"],["hero.jpg","הגג עם נוף לעיר"],["room_double.jpg","חדר זוגי"],["room_twin.jpg","חדר זוגי"]],
-      bullets: ["ארוחת בוקר עשירה בכל בוקר","גג עם ג׳קוזי, בר ומסעדה — ונוף ישיר לאקרופוליס","מלון בוטיק בעיצוב רטרו מיוחד, עם ספא וחדר כושר"] }
+      bullets: ["ארוחת בוקר עשירה בכל בוקר","גג עם ג׳קוזי, בר ומסעדה — ונוף ישיר לאקרופוליס","מלון בוטיק בעיצוב רטרו מיוחד, עם ספא וחדר כושר"],
+      policy: "במקרה של מלחמה — ביטול כרטיסי הטיסה ללא עלות" }
   ],
   policy: "",
   itinerary: [
@@ -284,11 +285,11 @@ const Q = {
     ["15.12","קניות ברחוב ארמו, השוק המרכזי והמוזיאון הארכיאולוגי"],
     ["16.12","צ׳ק־אאוט והמראה מאתונה 11:20"]
   ],
-  included: ["טיסות הלוך וחזור תל אביב – אתונה","טרולי לכל נוסע","3 לילות במלון 4 כוכבים על כיכר אומוניה, חדר זוגי","ארוחת בוקר בכל בוקר","ליווי אישי שלנו מההזמנה ועד הנחיתה"],
+  included: ["טיסות הלוך וחזור תל אביב – אתונה","טרולי לכל נוסע","3 לילות במלון 4 כוכבים על כיכר אומוניה, חדר זוגי","ארוחת בוקר בכל בוקר","ביטול כרטיסי הטיסה ללא עלות במקרה של מלחמה","ליווי אישי שלנו מההזמנה ועד הנחיתה"],
   excluded: "מזוודה רשומה · העברות משדה התעופה למלון · ארוחות צהריים וערב ומשקאות · ביטוח נסיעות · כניסה לאתרים · מס עירוני במלון (משולם במקום)",
   totalNote: "המחיר לזוג בחדר זוגי, כולל טיסות הלוך וחזור, טרולי לכל נוסע ו־3 לילות במלון 4 כוכבים בלב אתונה עם ארוחת בוקר.",
   pay: ["עד 9 תשלומים ללא ריבית","אפשרות ביותר מכרטיס אשראי אחד","העברה בנקאית","מזומן לפי חוק המזומן בישראל"],
-  terms: ["⏰ המחיר שמור להיום לחצי שעה בלבד — לאחר מכן מחירי הטיסות משתנים.","המחיר בכפוף לזמינות בעת ההזמנה.","המחיר לזוג החולק חדר זוגי.","הדרכון חייב להיות בתוקף לפחות חצי שנה אחרי תאריך החזרה.","שעות הטיסה סופיות רק לאחר אישור ההזמנה."]
+  terms: ["המחיר בכפוף לזמינות בעת ההזמנה.","המחיר לזוג החולק חדר זוגי.","הדרכון חייב להיות בתוקף לפחות חצי שנה אחרי תאריך החזרה.","במקרה של מלחמה — ביטול כרטיסי הטיסה ללא עלות.","שעות הטיסה סופיות רק לאחר אישור ההזמנה."]
 };
 /* ========================================================================== */
 
@@ -336,6 +337,7 @@ $("hotels").innerHTML = Q.hotels.map(h => `
     ${h.about?`<div class="info-box about">${h.about}</div>`:""}
     <div class="near">${h.near.map(n => `<div><b>${esc(n[0])}</b>${esc(n[1])}</div>`).join("")}</div>
     <ul class="dots-list">${h.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>
+    ${h.map?`<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.map)}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;padding:13px 16px;border-radius:12px;background:#16213e;color:#f6f1e9;font-weight:700;text-decoration:none;border:1.5px solid #b8975f">📍 ${document.documentElement.lang==="ar"?"افتح موقع الفندق على الخريطة":"לפתוח את מיקום המלון במפה"}</a>`:""}
     ${Q.policy?`<span class="policy">ℹ️ ${esc(Q.policy)}</span>`:""}
   </section>`).join("");
 
@@ -377,6 +379,23 @@ document.addEventListener("click", e => {
   else if (e.target.closest(".lb")) lb.classList.remove("on");
 });
 
+</script>
+
+<script>
+(function(){
+  var ar=document.documentElement.lang==="ar";
+  var t=(Q.title||"");
+  var cities={"באקו":"باكو","אתונה":"أثينا","טביליסי":"تبليسي","גאורגיה":"جورجيا","לימסול":"ليماسول","סופיה":"صوفيا","בולגריה":"بلغاريا","קפריסין":"قبرص"};
+  var dest=Q.dest; if(!dest){for(var k in cities){if(t.indexOf(k)>-1||t.indexOf(cities[k])>-1){dest=ar?cities[k]:k;break;}}}
+  var last=dest?(ar?"يلا، "+dest+" بتستناكم ✈️😄":"יאללה, "+dest+" מחכה לכם ✈️😄"):(ar?"يلا، الإجازة بتستناكم ✈️😄":"יאללה, החופשה מחכה לכם ✈️😄");
+  var html=ar
+   ?'<p style="margin:0 0 8px;font-weight:700">وبالمناسبة، نصيحة صغيرة منّا 😉</p><p style="margin:0 0 8px">الأسعار بتتغير كل شوي، واللي متوفر اليوم مش أكيد يضل لبكرا.</p><p style="margin:0 0 8px">ابعتولنا صورة الجوازات ومنحجزلكم الغرفة من هلأ، وهيك بيضل هالسعر إلكم 🙌</p><p style="margin:0;font-weight:700">'+last+'</p>'
+   :'<p style="margin:0 0 8px;font-weight:700">ובינתיים, טיפ קטן מאיתנו 😉</p><p style="margin:0 0 8px">המחירים משתנים כל הזמן, ומה שיש היום לא תמיד יהיה מחר.</p><p style="margin:0 0 8px">שלחו לנו צילום דרכונים ונשריין לכם את החדר כבר עכשיו, ככה המחיר הזה נשאר שלכם 🙌</p><p style="margin:0;font-weight:700">'+last+'</p>';
+  var box=document.createElement("div"); box.id="closer";
+  box.style.cssText="margin:18px 0;padding:18px 18px;border-radius:14px;background:#fff;border:1.5px solid #b8975f;color:#16213e;line-height:1.6;font-size:16px";
+  box.innerHTML=html;
+  var cta=document.getElementById("cta"); if(cta&&cta.parentNode) cta.parentNode.insertBefore(box,cta);
+})();
 </script>
 </body>
 </html>
