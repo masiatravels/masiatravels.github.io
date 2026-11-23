@@ -270,7 +270,7 @@ const Q = {
   ],
   bag: "🧳 כבודה: מזוודה רשומה עד 20 ק״ג לכל נוסע, הלוך וחזור",
   hotels: [
-    { place: "אתונה · כיכר אומוניה", stars: 4, where: "בלב העיר, ממש על כיכר אומוניה", nights: 3, dates: "14–17.12.2026",
+    { map: "Panagi Tsaldari (Pireos) 1, Athens 105 52, Greece", place: "אתונה · כיכר אומוניה", stars: 4, where: "בלב העיר, ממש על כיכר אומוניה", nights: 3, dates: "14–17.12.2026",
       score: "8.1", scoreWord: "טוב מאוד", reviews: "2,200+",
       about: "📍 <b>כיכר אומוניה</b> — הכיכר העגולה המפורסמת בלב אתונה, מהעתיקות בעיר (נוסדה ב־1846). במרכזה מזרקה עגולה ענקית ברוחב 30 מטר שמזנקת לגובה 20 מטר ומוארת בכל ערב. מתחת לכיכר נמצאת תחנת המטרו המרכזית של העיר, וממנה הולכים ברגל לשוק המרכזי, לרחוב הקניות ארמו ולמונסטירקי.",
       room: "🛏️ <b>חדר סופריור מרווח — 41 מ״ר</b><br>מיטת קינג גדולה + ספה נפתחת רחבה — מתאים בדיוק ל־3 נוסעים. חדר גדול במיוחד ביחס למלונות במרכז אתונה, עם הרבה מקום לכולם להרגיש בנוח.",
@@ -338,6 +338,7 @@ $("hotels").innerHTML = Q.hotels.map(h => `
     <div class="near">${h.near.map(n => `<div><b>${esc(n[0])}</b>${esc(n[1])}</div>`).join("")}</div>
     <ul class="dots-list">${h.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>
     ${Q.policy?`<span class="policy">ℹ️ ${esc(Q.policy)}</span>`:""}
+    ${h.map?`<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.map)}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;padding:13px 16px;border-radius:12px;background:#16213e;color:#f6f1e9;font-weight:700;text-decoration:none;border:1.5px solid #b8975f">📍 ${document.documentElement.lang==="ar"?"افتح موقع الفندق على الخريطة":"לפתוח את מיקום המלון במפה"}</a>`:""}
   </section>`).join("");
 
 $("tl").innerHTML = Q.itinerary.map(r => `<div class="tl-row"><div class="tl-d">${esc(r[0])}</div><div class="tl-t">${esc(r[1])}</div></div>`).join("");
