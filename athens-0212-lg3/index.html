@@ -282,7 +282,7 @@ const Q = {
   ],
   bag: "🧳 כבודה: טרולי לכל נוסעת, הלוך וחזור · שדרוג למזוודה בתוספת ₪260 לנוסעת",
   hotels: [
-    { map: "Karaiskaki 19, Athens 105 54, Greece", place: "אתונה · מונסטירקי", stars: 4, where: "3 דקות הליכה ממטרו מונסטירקי", nights: 5, dates: "2–7.12.2026",
+    { map: "Karaiskaki 19, Athens 105 54, Greece", revs: ["ניקיון מצוין — ציון 9.4", "שירות מעולה — ציון 9.4", "מיקום מנצח ליד מונסטירקי וארמו", "חדרים מעוצבים ומיוחדים"], place: "אתונה · מונסטירקי", stars: 4, where: "3 דקות הליכה ממטרו מונסטירקי", nights: 5, dates: "2–7.12.2026",
       score: "9.2", scoreWord: "מצוין", reviews: "800+",
       about: "📍 <b>צעדים משוק מונסטירקי</b><br>מלון בוטיק 4 כוכבים קטן ואינטימי, עם 17 חדרים בלבד בעיצוב מודרני ומיוחד, מקלחת גשם ומצעים איכותיים. 3 דקות הליכה למטרו מונסטירקי, 8 דקות לאקרופוליס, וממש ליד רחוב הקניות ארמו ושוק הפשפשים. על הגג מרפסת עם נוף לעיר ולאקרופוליס.<br><br>⭐ <b>ציונים גבוהים מאוד</b><br>ציון 9.2 מהאורחים, עם 9.4 לניקיון ו־9.4 לשירות.",
       near: [["3 דק׳","הליכה למטרו מונסטירקי"],["2 דק׳","הליכה לשוק מונסטירקי"],["1 דק׳","רחוב הקניות ארמו"],["8 דק׳","הליכה לאקרופוליס"],["10 דק׳","הליכה לכיכר סינטגמה"]],
@@ -349,6 +349,7 @@ $("hotels").innerHTML = Q.hotels.map(h => `
     ${h.photos.length>1?`<div class="dots">${h.photos.map(()=>"<i></i>").join("")}</div>`:""}
     ${h.room?`<div class="info-box">${h.room}</div>`:""}
     ${h.about?`<div class="info-box about">${h.about}</div>`:""}
+    ${h.revs?`<div class="revbox" style="margin:14px 0;padding:16px 14px;border-radius:16px;background:#fffdf7;border:1.5px solid #e6d6b3;box-shadow:0 4px 14px rgba(22,33,62,.06)"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px"><b style="font-size:17px;color:#16213e">${document.documentElement.lang==="ar"?"💬 شو بحكوا الضيوف":"💬 מה האורחים אומרים"}</b><span style="color:#b8975f;font-size:16px;letter-spacing:1px">★★★★★</span></div><div style="display:grid;gap:7px">${h.revs.map(r=>`<div style="display:flex;gap:8px;align-items:flex-start;font-size:14.5px;color:#2b2b2b;line-height:1.45"><span style="color:#2e8b57;font-weight:900">✔</span><span>${esc(r)}</span></div>`).join("")}</div><div style="margin-top:10px;font-size:13px;color:#7a6a4a;text-align:center">${document.documentElement.lang==="ar"?"تقييم":"ציון"} <b style="color:#16213e">${esc(h.score)}</b> · ${esc(h.reviews)} ${document.documentElement.lang==="ar"?"تقييم حقيقي":"חוות דעת אמיתיות"}</div></div>`:""}
     <div class="near">${h.near.map(n => `<div><b>${esc(n[0])}</b>${esc(n[1])}</div>`).join("")}</div>
     <ul class="dots-list">${h.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>
     ${(h.policy||Q.policy)?`<span class="policy">ℹ️ ${esc(h.policy||Q.policy)}</span>`:""}

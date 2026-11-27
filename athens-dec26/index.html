@@ -272,7 +272,7 @@ const Q = {
   ],
   bag: "🧳 כבודה: מזוודה רשומה עד 20 ק״ג לכל נוסע, הלוך וחזור",
   hotels: [
-    { map: "Panagi Tsaldari (Pireos) 1, Athens 105 52, Greece", place: "אתונה · כיכר אומוניה", stars: 4, where: "בלב העיר, ממש על כיכר אומוניה", nights: 3, dates: "14–17.12.2026",
+    { map: "Panagi Tsaldari (Pireos) 1, Athens 105 52, Greece", revs: ["ארוחת בוקר עשירה וטעימה", "נוף מהמם מהגג לאקרופוליס", "צוות נחמד ושירותי", "מיקום נוח, ממש ליד המטרו"], place: "אתונה · כיכר אומוניה", stars: 4, where: "בלב העיר, ממש על כיכר אומוניה", nights: 3, dates: "14–17.12.2026",
       score: "8.1", scoreWord: "טוב מאוד", reviews: "2,200+",
       about: "📍 <b>כיכר אומוניה</b> — הכיכר העגולה המפורסמת בלב אתונה, מהעתיקות בעיר (נוסדה ב־1846). במרכזה מזרקה עגולה ענקית ברוחב 30 מטר שמזנקת לגובה 20 מטר ומוארת בכל ערב. מתחת לכיכר נמצאת תחנת המטרו המרכזית של העיר, וממנה הולכים ברגל לשוק המרכזי, לרחוב הקניות ארמו ולמונסטירקי.",
       room: "🛏️ <b>חדר סופריור מרווח — 41 מ״ר</b><br>מיטת קינג גדולה + ספה נפתחת רחבה — מתאים בדיוק ל־3 נוסעים. חדר גדול במיוחד ביחס למלונות במרכז אתונה, עם הרבה מקום לכולם להרגיש בנוח.",
@@ -337,6 +337,7 @@ $("hotels").innerHTML = Q.hotels.map(h => `
     ${h.photos.length>1?`<div class="dots">${h.photos.map(()=>"<i></i>").join("")}</div>`:""}
     ${h.room?`<div class="info-box">${h.room}</div>`:""}
     ${h.about?`<div class="info-box about">${h.about}</div>`:""}
+    ${h.revs?`<div class="revbox" style="margin:14px 0;padding:16px 14px;border-radius:16px;background:#fffdf7;border:1.5px solid #e6d6b3;box-shadow:0 4px 14px rgba(22,33,62,.06)"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px"><b style="font-size:17px;color:#16213e">${document.documentElement.lang==="ar"?"💬 شو بحكوا الضيوف":"💬 מה האורחים אומרים"}</b><span style="color:#b8975f;font-size:16px;letter-spacing:1px">★★★★★</span></div><div style="display:grid;gap:7px">${h.revs.map(r=>`<div style="display:flex;gap:8px;align-items:flex-start;font-size:14.5px;color:#2b2b2b;line-height:1.45"><span style="color:#2e8b57;font-weight:900">✔</span><span>${esc(r)}</span></div>`).join("")}</div><div style="margin-top:10px;font-size:13px;color:#7a6a4a;text-align:center">${document.documentElement.lang==="ar"?"تقييم":"ציון"} <b style="color:#16213e">${esc(h.score)}</b> · ${esc(h.reviews)} ${document.documentElement.lang==="ar"?"تقييم حقيقي":"חוות דעת אמיתיות"}</div></div>`:""}
     <div class="near">${h.near.map(n => `<div><b>${esc(n[0])}</b>${esc(n[1])}</div>`).join("")}</div>
     <ul class="dots-list">${h.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>
     ${Q.policy?`<span class="policy">ℹ️ ${esc(Q.policy)}</span>`:""}
